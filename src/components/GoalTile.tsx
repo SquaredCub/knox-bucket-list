@@ -5,12 +5,12 @@ import { Pips } from './Pips';
 
 const LABELS: Record<GoalStatus, string> = { open: 'Not started', progress: 'In progress', done: 'Done' };
 
-type Props = { goal: Goal; dim: boolean };
+type Props = { goal: Goal };
 
-export function GoalTile({ goal, dim }: Props) {
+export function GoalTile({ goal }: Props) {
   const [open, setOpen] = useState(false);
   const detailsId = useId();
-  const classes = ['goal', 'panel', `goal--${goal.status}`, dim && 'goal--dim'].filter(Boolean).join(' ');
+  const classes = `goal panel goal--${goal.status}`;
 
   return (
     <article className={classes}>

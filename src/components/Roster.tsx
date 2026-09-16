@@ -7,11 +7,11 @@ export function Roster({ players, selected, onSelect }: Props) {
     <div className="roster">
       <span className="hint">Show goals for:</span>
       <button className="chip" aria-pressed={selected === null} onClick={() => onSelect(null)}>
-        Everyone
+        <span data-label="Everyone">Everyone</span>
       </button>
       {players.map((p) => (
-        <button key={p.id} className="chip" aria-pressed={selected === p.id} onClick={() => onSelect(p.id)}>
-          {p.name}
+        <button key={p.id} className="chip" aria-pressed={selected === p.id} onClick={() => onSelect(selected === p.id ? null : p.id)}>
+          <span data-label={p.name}>{p.name}</span>
         </button>
       ))}
     </div>

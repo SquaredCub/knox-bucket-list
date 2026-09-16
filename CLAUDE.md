@@ -42,8 +42,7 @@ Vite + React + TypeScript + SCSS. Zod validates content. Deployed to GitHub Page
 Dark, horror-leaning, inspired by the game UI: translucent panels with thin borders, skill-style
 box meters (`Pips`), a one-time flicker on the "This is how we survived." headline, and museum
 exhibits styled as lined notebook pages. Colors and fonts live in `src/styles/_tokens.scss`.
-Fonts: Barlow Condensed (headings) and Barlow (body). `docs/mockup.html` is the approved
-single-file mockup from the planning chat; match it when in doubt.
+Fonts: Barlow Condensed (headings) and Barlow (body).
 
 ## Bingo
 - Cards are dealt once with `npm run deal` and saved in `bingo.json`, so editing the pool never
@@ -66,5 +65,5 @@ Use `import.meta.env.BASE_URL` for any file paths from `public/`.
 ## Open ideas, not decided
 - A "Bingo winners" line on the public page.
 - JSON schemas for editor autocomplete (Zod 4 has `z.toJSONSchema`).
-- A second, harder bingo card for later streams. The earlier list lives in docs/mockup.html.
+- A second, harder bingo card for later streams. A draft list lives in `docs/bingo-week-two.md`.
 - The owner may move "Night raid" from Silver to Gold.
