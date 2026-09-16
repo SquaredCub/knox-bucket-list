@@ -9,20 +9,36 @@
         "title": "Survive the first week",
         "description": "Keep the group going through the first seven in-game days. Deaths happen, but everyone needs to be back in the game when the week is up.",
         "status": "open",
-        "who": []
+        "who": [
+          "all"
+        ]
       },
       {
         "id": "museum",
         "title": "Open the roadside museum",
         "description": "Build a museum where we display the things worth remembering, from rare finds to pieces of server history. Once it's open, every survivor can donate exhibits.",
         "status": "open",
-        "who": [],
+        "who": [
+          "cub"
+        ],
         "unlocksMuseum": true,
         "subtasks": [
-          { "label": "Pick a spot on the highway", "done": false },
-          { "label": "Lay the wooden floor", "done": false },
-          { "label": "Build the display walls", "done": false },
-          { "label": "Place the first exhibit", "done": false }
+          {
+            "label": "Pick a spot on the highway",
+            "done": false
+          },
+          {
+            "label": "Lay the wooden floor",
+            "done": false
+          },
+          {
+            "label": "Build the display walls",
+            "done": false
+          },
+          {
+            "label": "Place the first exhibit",
+            "done": false
+          }
         ]
       },
       {
@@ -31,7 +47,11 @@
         "description": "Every survivor picks a skill and takes it all the way to level 10. Done once all eight have one.",
         "status": "open",
         "who": [],
-        "progress": { "current": 0, "total": 8, "label": "survivors" }
+        "progress": {
+          "current": 0,
+          "total": 8,
+          "label": "survivors"
+        }
       },
       {
         "id": "fish",
@@ -40,10 +60,22 @@
         "status": "open",
         "who": [],
         "subtasks": [
-          { "label": "Gather a rod for everyone", "done": false },
-          { "label": "Stock bait and tackle", "done": false },
-          { "label": "Pick the lake", "done": false },
-          { "label": "Crown a winner", "done": false }
+          {
+            "label": "Gather a rod for everyone",
+            "done": false
+          },
+          {
+            "label": "Stock bait and tackle",
+            "done": false
+          },
+          {
+            "label": "Pick the lake",
+            "done": false
+          },
+          {
+            "label": "Crown a winner",
+            "done": false
+          }
         ]
       }
     ]
@@ -67,10 +99,22 @@
         "status": "open",
         "who": [],
         "subtasks": [
-          { "label": "A seat for everyone", "done": false },
-          { "label": "Fuel for the round trip", "done": false },
-          { "label": "Reach somewhere far away", "done": false },
-          { "label": "Everyone makes it home", "done": false }
+          {
+            "label": "A seat for everyone",
+            "done": false
+          },
+          {
+            "label": "Fuel for the round trip",
+            "done": false
+          },
+          {
+            "label": "Reach somewhere far away",
+            "done": false
+          },
+          {
+            "label": "Everyone makes it home",
+            "done": false
+          }
         ]
       },
       {
@@ -85,7 +129,9 @@
         "title": "Survive the first winter",
         "description": "Get the whole group through the cold months, from the first frost until spring.",
         "status": "open",
-        "who": []
+        "who": [
+          "all"
+        ]
       },
       {
         "id": "farm",
@@ -94,12 +140,30 @@
         "status": "open",
         "who": [],
         "subtasks": [
-          { "label": "Cow", "done": false },
-          { "label": "Pig", "done": false },
-          { "label": "Sheep", "done": false },
-          { "label": "Chicken", "done": false },
-          { "label": "Turkey", "done": false },
-          { "label": "Rabbit", "done": false }
+          {
+            "label": "Cow",
+            "done": false
+          },
+          {
+            "label": "Pig",
+            "done": false
+          },
+          {
+            "label": "Sheep",
+            "done": false
+          },
+          {
+            "label": "Chicken",
+            "done": false
+          },
+          {
+            "label": "Turkey",
+            "done": false
+          },
+          {
+            "label": "Rabbit",
+            "done": false
+          }
         ]
       },
       {
@@ -128,7 +192,9 @@
         "title": "Survive a full year",
         "description": "Keep the server going for a full in-game year from the day we started.",
         "status": "open",
-        "who": []
+        "who": [
+          "all"
+        ]
       },
       {
         "id": "books",
@@ -136,7 +202,11 @@
         "description": "Find all five volumes for each of the 24 skills and shelve the complete set in the museum.",
         "status": "open",
         "who": [],
-        "progress": { "current": 0, "total": 120, "label": "books" }
+        "progress": {
+          "current": 0,
+          "total": 120,
+          "label": "books"
+        }
       },
       {
         "id": "village",

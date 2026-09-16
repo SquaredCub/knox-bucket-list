@@ -14,7 +14,7 @@ Vite + React + TypeScript + SCSS. Zod validates content. Deployed to GitHub Page
 
 ## Content lives in content/, never in components
 - `players.json`: id, name, tag (2 letters), color.
-- `goals.json`: tiers with goals. `status` is `open`, `progress` or `done`. `who` lists player ids.
+- `goals.json`: tiers with goals. `status` is `open`, `progress` or `done`. `who` lists player ids; `"all"` expands to every player.
   Optional `subtasks`, `progress` and `unlocksMuseum` (only one goal may have it).
 - `museum/NNN-slug.md`: one exhibit per file. Header has `title`, `donor` (player id), optional
   `image` (file in `public/museum/`). The story goes below the header. Subfolders are ignored;

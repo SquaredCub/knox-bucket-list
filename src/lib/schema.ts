@@ -57,6 +57,18 @@ export type Exhibit = z.infer<typeof exhibitMetaSchema> & {
   paragraphs: string[];
 };
 
+/** Put this in a goal's "who" list to credit every player. */
+export const ALL_PLAYERS = 'all';
+
+/** Replaces "all" in each goal's "who" with every player id. */
+export function expandWho(tiers: Tier[], players: Player[]): Tier[] {
+  const everyone = players.map((p) => p.id);
+  return tiers.map((t) => ({
+    ...t,
+    goals: t.goals.map((g) => (g.who.includes(ALL_PLAYERS) ? { ...g, who: everyone } : g)),
+  }));
+}
+
 /** Checks that need more than one file: player ids, duplicates, card squares. */
 export function crossCheck(players: Player[], tiers: Tier[], bingo: Bingo, exhibits: Exhibit[]): string[] {
   const errors: string[] = [];
@@ -64,13 +76,14 @@ export function crossCheck(players: Player[], tiers: Tier[], bingo: Bingo, exhib
   const dupes = (list: string[]) => list.filter((v, i) => list.indexOf(v) !== i);
 
   for (const d of dupes(players.map((p) => p.id))) errors.push(`players.json: duplicate player id "${d}"`);
+  if (playerIds.has(ALL_PLAYERS)) errors.push(`players.json: "${ALL_PLAYERS}" is reserved for goals and can't be a player id`);
   const goalIds = tiers.flatMap((t) => t.goals.map((g) => g.id));
   for (const d of dupes(goalIds)) errors.push(`goals.json: duplicate goal id "${d}"`);
 
   for (const t of tiers)
     for (const g of t.goals)
       for (const id of g.who)
-        if (!playerIds.has(id)) errors.push(`goals.json: goal "${g.id}" lists unknown player "${id}"`);
+        if (id !== ALL_PLAYERS && !playerIds.has(id)) errors.push(`goals.json: goal "${g.id}" lists unknown player "${id}"`);
 
   if (tiers.flatMap((t) => t.goals).filter((g) => g.unlocksMuseum).length > 1)
     errors.push('goals.json: only one goal can have "unlocksMuseum": true');

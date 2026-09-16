@@ -20,7 +20,7 @@ Everything you'll normally change is in `content/`:
 | To do this | Edit |
 | --- | --- |
 | Mark a goal in progress or done | `status` in `content/goals.json` |
-| Credit who worked on a goal | add player ids to `who` |
+| Credit who worked on a goal | add player ids to `who`, or `"all"` for everyone |
 | Tick a sub-task | set `done` to `true` |
 | Update a counter (skill books) | `progress.current` |
 | Add a museum exhibit | new file in `content/museum/`, like `004-gold-watch.md` |
