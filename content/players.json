@@ -1,0 +1,10 @@
+[
+  { "id": "gumpy", "name": "Gumpy_Gamer", "tag": "GG", "color": "#7A3B2E" },
+  { "id": "bread", "name": "Breadrolll", "tag": "BR", "color": "#8A6A1F" },
+  { "id": "mayj", "name": "MayjorMayham", "tag": "MM", "color": "#5B4A8A" },
+  { "id": "chan", "name": "Chandra", "tag": "CH", "color": "#2E5A7A" },
+  { "id": "flash", "name": "Flash", "tag": "FL", "color": "#A33A3A" },
+  { "id": "drew", "name": "Drew", "tag": "DR", "color": "#2F6B4F" },
+  { "id": "fee", "name": "Fee", "tag": "FE", "color": "#8A3F6E" },
+  { "id": "cub", "name": "SquaredCub", "tag": "SC", "color": "#3E5560" }
+]

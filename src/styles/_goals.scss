@@ -1,0 +1,230 @@
+.roster {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 24px 0 6px;
+  padding-top: 16px;
+  border-top: 1px solid var(--panel-edge);
+
+  .hint {
+    font-size: 14px;
+    color: var(--muted);
+    margin-right: 4px;
+  }
+}
+
+.chip {
+  border: 1px solid var(--panel-edge);
+  background: var(--panel);
+  border-radius: 2px;
+  padding: 3px 10px;
+  font-size: 14px;
+
+  &[aria-pressed='true'] {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+    font-weight: 600;
+  }
+}
+
+.tier {
+  margin-top: 32px;
+
+  &--bronze { --tc: var(--bronze); }
+  &--silver { --tc: var(--silver); }
+  &--gold { --tc: var(--gold); }
+}
+
+.tier-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  h2 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--tc);
+    line-height: 1;
+  }
+
+  .count {
+    color: var(--muted);
+    font-size: 14px;
+    margin-left: auto;
+  }
+}
+
+.tier-note {
+  margin: 4px 0 8px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.goal {
+  margin-top: 8px;
+  padding: 14px 16px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 14px;
+
+  &--dim { opacity: 0.3; }
+
+  &--done {
+    background: linear-gradient(rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.035)), var(--panel);
+    h3 { color: var(--tc); }
+  }
+}
+
+// Read-only status indicator
+.status {
+  width: 26px;
+  height: 26px;
+  margin-top: 2px;
+  border: 1px solid var(--muted);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.4);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1;
+
+  .goal--progress & {
+    background: repeating-linear-gradient(135deg, transparent 0 4px, var(--warn) 4px 6px);
+    border-color: var(--warn);
+  }
+
+  .goal--done & {
+    background: var(--tc);
+    border-color: var(--tc);
+    color: var(--bg);
+  }
+}
+
+.goal-toggle {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+
+  &:focus-visible {
+    outline: 2px solid var(--warn);
+    outline-offset: 3px;
+  }
+
+  &:hover h3 {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+}
+
+.state {
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  margin-left: 8px;
+  color: var(--muted);
+
+  .goal--progress & { color: var(--warn); }
+}
+
+.chev {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: 8px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+
+  [aria-expanded='true'] > & {
+    transform: rotate(-135deg);
+    margin-top: 12px;
+  }
+
+  @media (prefers-reduced-motion: reduce) { transition: none; }
+}
+
+.who {
+  margin-top: 8px;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+
+  span {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 2px;
+    color: #fff;
+  }
+}
+
+.goal-details {
+  margin-top: 6px;
+
+  .desc {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 62ch;
+  }
+}
+
+.subs {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  li {
+    font-size: 13px;
+    border: 1px solid var(--panel-edge);
+    padding: 1px 8px;
+    border-radius: 2px;
+    color: var(--muted);
+
+    &.ok {
+      color: var(--ink);
+      border-color: var(--muted);
+      text-decoration: line-through;
+      text-decoration-color: var(--blood-hi);
+      text-decoration-thickness: 2px;
+    }
+  }
+}
+
+.bar {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.unlock {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--warn);
+}

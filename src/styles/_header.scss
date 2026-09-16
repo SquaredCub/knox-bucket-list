@@ -1,0 +1,30 @@
+.site-header {
+  h1 {
+    margin: 0;
+    font-weight: 800;
+    font-size: clamp(40px, 9vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -0.5px;
+    color: #ede7da;
+    text-shadow: 0 0 18px rgba(168, 38, 31, 0.35);
+    animation: flicker 2.6s ease-out 1;
+  }
+
+  p {
+    margin: 10px 0 0;
+    color: var(--muted);
+  }
+}
+
+@keyframes flicker {
+  0% { opacity: 0; }
+  8% { opacity: 0.8; }
+  10% { opacity: 0.1; }
+  14% { opacity: 0.9; }
+  17% { opacity: 0.3; }
+  24%, 100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header h1 { animation: none; }
+}

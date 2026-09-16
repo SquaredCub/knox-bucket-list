@@ -1,0 +1,150 @@
+[
+  {
+    "id": "bronze",
+    "name": "Bronze",
+    "note": "Early wins for the first couple of weeks.",
+    "goals": [
+      {
+        "id": "week",
+        "title": "Survive the first week",
+        "description": "Keep the group going through the first seven in-game days. Deaths happen, but everyone needs to be back in the game when the week is up.",
+        "status": "open",
+        "who": []
+      },
+      {
+        "id": "museum",
+        "title": "Open the roadside museum",
+        "description": "Build a museum where we display the things worth remembering, from rare finds to pieces of server history. Once it's open, every survivor can donate exhibits.",
+        "status": "open",
+        "who": [],
+        "unlocksMuseum": true,
+        "subtasks": [
+          { "label": "Pick a spot on the highway", "done": false },
+          { "label": "Lay the wooden floor", "done": false },
+          { "label": "Build the display walls", "done": false },
+          { "label": "Place the first exhibit", "done": false }
+        ]
+      },
+      {
+        "id": "lvl10",
+        "title": "Everyone reaches level 10 in a skill",
+        "description": "Every survivor picks a skill and takes it all the way to level 10. Done once all eight have one.",
+        "status": "open",
+        "who": [],
+        "progress": { "current": 0, "total": 8, "label": "survivors" }
+      },
+      {
+        "id": "fish",
+        "title": "Hold the fishing competition",
+        "description": "A server-wide fishing contest. The heaviest fish wins, and a trophy-size catch wins on the spot.",
+        "status": "open",
+        "who": [],
+        "subtasks": [
+          { "label": "Gather a rod for everyone", "done": false },
+          { "label": "Stock bait and tackle", "done": false },
+          { "label": "Pick the lake", "done": false },
+          { "label": "Crown a winner", "done": false }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "silver",
+    "name": "Silver",
+    "note": "Group projects once the base is stable.",
+    "goals": [
+      {
+        "id": "prison",
+        "title": "Clear the prison",
+        "description": "Clear every building of zombies. No zomboid left standing (or crawling).",
+        "status": "open",
+        "who": []
+      },
+      {
+        "id": "roadtrip",
+        "title": "Take a road trip together",
+        "description": "All eight survivors head out together, travel somewhere far from home and make it back. Where we go doesn't matter, the trip is the goal.",
+        "status": "open",
+        "who": [],
+        "subtasks": [
+          { "label": "A seat for everyone", "done": false },
+          { "label": "Fuel for the round trip", "done": false },
+          { "label": "Reach somewhere far away", "done": false },
+          { "label": "Everyone makes it home", "done": false }
+        ]
+      },
+      {
+        "id": "night",
+        "title": "Night raid",
+        "description": "Pick a big location and clear it as a group, after dark. Done when the place is empty before the sun comes up.",
+        "status": "open",
+        "who": []
+      },
+      {
+        "id": "winter",
+        "title": "Survive the first winter",
+        "description": "Get the whole group through the cold months, from the first frost until spring.",
+        "status": "open",
+        "who": []
+      },
+      {
+        "id": "farm",
+        "title": "Keep every farm animal",
+        "description": "Raise one of each farm animal at the same time: a cow, a pig, a sheep, a chicken, a turkey and a rabbit.",
+        "status": "open",
+        "who": [],
+        "subtasks": [
+          { "label": "Cow", "done": false },
+          { "label": "Pig", "done": false },
+          { "label": "Sheep", "done": false },
+          { "label": "Chicken", "done": false },
+          { "label": "Turkey", "done": false },
+          { "label": "Rabbit", "done": false }
+        ]
+      },
+      {
+        "id": "cemetery",
+        "title": "Build a cemetery for the fallen",
+        "description": "Build a place to remember the survivors we lost. Done once the first grave or memorial is in place.",
+        "status": "open",
+        "who": []
+      }
+    ]
+  },
+  {
+    "id": "gold",
+    "name": "Gold",
+    "note": "The long haul.",
+    "goals": [
+      {
+        "id": "sky",
+        "title": "Clear a Louisville skyscraper",
+        "description": "Clear one of Louisville's skyscrapers, from the lobby to the roof. That's up to 32 floors of zombies.",
+        "status": "open",
+        "who": []
+      },
+      {
+        "id": "year",
+        "title": "Survive a full year",
+        "description": "Keep the server going for a full in-game year from the day we started.",
+        "status": "open",
+        "who": []
+      },
+      {
+        "id": "books",
+        "title": "Collect all 120 skill books",
+        "description": "Find all five volumes for each of the 24 skills and shelve the complete set in the museum.",
+        "status": "open",
+        "who": [],
+        "progress": { "current": 0, "total": 120, "label": "books" }
+      },
+      {
+        "id": "village",
+        "title": "Build a village",
+        "description": "Every survivor builds their own home in the same area, until it grows into a small village.",
+        "status": "open",
+        "who": []
+      }
+    ]
+  }
+]

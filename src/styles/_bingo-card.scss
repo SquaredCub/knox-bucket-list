@@ -1,0 +1,171 @@
+@use 'tokens' as *;
+
+.bingo {
+  max-width: 640px;
+}
+
+.bingo-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  h1 {
+    margin: 0;
+    font-size: clamp(32px, 7vw, 44px);
+    font-weight: 800;
+    line-height: 1;
+    word-break: break-word;
+  }
+
+  p {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+}
+
+.timer {
+  text-align: right;
+
+  .clock {
+    font-family: $font-display;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &--running .clock { color: var(--warn); }
+  &--over .clock { color: var(--blood-hi); }
+
+  .label {
+    font-size: 13px;
+    color: var(--muted);
+  }
+}
+
+.bingo-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.btn {
+  background: var(--blood);
+  color: #fff;
+  border: 1px solid var(--blood-hi);
+  border-radius: 2px;
+  padding: 8px 16px;
+  font-weight: 600;
+
+  &:hover { background: var(--blood-hi); }
+
+  &--ghost {
+    background: var(--panel);
+    border-color: var(--panel-edge);
+    color: var(--ink);
+
+    &:hover { background: rgba(255, 255, 255, 0.08); }
+  }
+}
+
+.board {
+  margin-top: 14px;
+  padding: 8px;
+}
+
+.letters,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+}
+
+.letters div {
+  text-align: center;
+  font-family: $font-display;
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--blood-hi);
+  line-height: 1.2;
+}
+
+.cell {
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--panel-edge);
+  border-radius: 2px;
+  padding: 4px 4px 14px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: clamp(10px, 2.2vw, 14px);
+  line-height: 1.15;
+  position: relative;
+  color: var(--ink);
+
+  &:not(:disabled):hover { background: rgba(255, 255, 255, 0.1); }
+  &:disabled { cursor: default; }
+
+  &--on {
+    background: var(--blood);
+    border-color: var(--blood-hi);
+    color: #fff;
+
+    &:not(:disabled):hover { background: var(--blood-hi); }
+
+    &::after {
+      content: '✓';
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      right: 0;
+      font-size: 11px;
+      line-height: 1.1;
+      font-weight: 600;
+      opacity: 0.75;
+    }
+  }
+
+  &--win {
+    background: var(--warn);
+    border-color: #e8c35a;
+    color: var(--bg);
+    font-weight: 600;
+
+    &:not(:disabled):hover { background: #d8ad3d; }
+  }
+
+  &--free { font-style: italic; }
+}
+
+.banner {
+  margin-top: 12px;
+  padding: 10px 14px;
+  font-family: $font-display;
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--warn);
+  border-color: var(--warn);
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: grid;
+  gap: 6px;
+
+  a {
+    display: block;
+    padding: 10px 14px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover { background: rgba(255, 255, 255, 0.08); }
+  }
+}

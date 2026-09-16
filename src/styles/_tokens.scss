@@ -1,0 +1,19 @@
+// Colors and fonts in one place. Change the look here.
+:root {
+  --bg: #1a1c1b;
+  --panel: rgba(8, 9, 9, 0.62);
+  --panel-edge: #55564f;
+  --ink: #e4e0d6;
+  --muted: #9c988d;
+  --blood: #7e1a17;
+  --blood-hi: #a8261f;
+  --warn: #c49a2c;
+  --paper: #d9d2bf;
+  --paper-ink: #2a2620;
+  --bronze: #b0703f;
+  --silver: #a3abb1;
+  --gold: #cfa23a;
+}
+
+$font-body: 'Barlow', Arial, sans-serif;
+$font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
