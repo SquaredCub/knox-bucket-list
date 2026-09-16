@@ -4,7 +4,7 @@ Goal tracker and museum for our Project Zomboid server, plus streamer bingo card
 
 ## Setup
 
-Requires Node 22 or newer.
+Requires Node 22 (pinned in `mise.toml`; run `mise install` if you use mise).
 
 ```bash
 npm install
