@@ -6,5 +6,6 @@
   { "id": "flash", "name": "Flash", "tag": "FL", "color": "#A33A3A" },
   { "id": "drew", "name": "Drew", "tag": "DR", "color": "#2F6B4F" },
   { "id": "fee", "name": "Fee", "tag": "FE", "color": "#8A3F6E" },
-  { "id": "cub", "name": "SquaredCub", "tag": "SC", "color": "#3E5560" }
+  { "id": "cub", "name": "SquaredCub", "tag": "SC", "color": "#3E5560" },
+  { "id": "kab", "name": "Its_Kab", "tag": "IK", "color": "#B06B2E" }
 ]
