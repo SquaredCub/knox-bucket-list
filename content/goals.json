@@ -8,7 +8,7 @@
         "id": "week",
         "title": "Survive the first week",
         "description": "Keep the group going through the first seven in-game days. Deaths happen, but everyone needs to be back in the game when the week is up.",
-        "status": "open",
+        "status": "done",
         "who": [
           "all"
         ]
